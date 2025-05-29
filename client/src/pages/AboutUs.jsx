@@ -1,6 +1,7 @@
 import React from 'react'
-
-export default function About() {
+import Header from './Header';
+export default function AboutUs() {
+  
   // --- PawsFurVive Section ---
   const pawsFurViveInfo = {
     name: "PawsFurVive",
@@ -13,11 +14,12 @@ export default function About() {
       "Join PawsFurVive and help us give every pet a second chance!"
     ]
   };
-
+  
  
   // Card for PawsFurVive Info
   function PawsFurViveCard({ info }) {
     return (
+      <>
       <section className="w-full bg-white rounded-2xl shadow p-6">
         <h2 className="text-2xl font-bold text-orange-500 mb-2">{info.name}</h2>
         <p className="text-gray-700 mb-4">{info.description}</p>
@@ -27,6 +29,7 @@ export default function About() {
           ))}
         </ul>
       </section>
+      </>
     );
   }
 
@@ -153,6 +156,37 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-blue-100 to-blue-200 font-quicksand flex flex-col">
+     
+     <header className="w-full bg-white shadow-md py-4 px-8 flex items-center justify-between mb-6">
+        <div className="flex items-center gap-2">
+          <span className="text-2xl md:text-3xl font-bold text-orange-500">🐾 PawsFurVive</span>
+        </div>
+        <div className="hidden md:flex gap-8 text-[#D5451B] font-semibold">
+          <a href="/home" className="hover:text-[#B521C0] transition">Home</a>
+          <a href="#" className="hover:text-[#B521C0] transition">Adopt</a>
+          <a href="/About" className="hover:text-[#B521C0] transition">About</a>
+          <a href="#" className="hover:text-[#B521C0] transition">Developer</a>
+        </div>
+        <div className="flex gap-3">
+          {/* Sign In and Sign Up buttons */}
+          <a
+            href="/Login"
+            className="bg-white border border-[#B521C0] text-[#B521C0] hover:bg-[#B521C0] hover:text-white font-bold py-2 px-4 rounded-xl shadow transition-colors duration-300 text-base ml-2"
+          >
+            Sign In
+          </a>
+          <a
+            href="/signup"
+            className="bg-[#B521C0] text-white hover:bg-[#D5451B] font-bold py-2 px-4 rounded-xl shadow transition-colors duration-300 text-base ml-2"
+          >
+            Sign Up
+          </a>
+
+        </div>
+      </header>
+
+
+
       <main className="flex-1 p-6 flex flex-col items-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-orange-400 drop-shadow text-center">
           🐾 About PetAdoptions 🐾

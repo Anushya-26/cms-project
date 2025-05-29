@@ -1,8 +1,9 @@
-import { Route, Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
+import AboutUs from "../pages/AboutUs";
 import Login from "../pages/Login";
 import AboutUS from "../pages/AboutUs";
-import Developers from "../pages/Developers"; 
+import DevelopersPage from "../pages/DevelopersPage";
 
 
 export default function AppRoutes() {
@@ -12,9 +13,9 @@ export default function AppRoutes() {
         <Route path="/home" element={<Home />} />
         {/* <Route path="/login" element={<Login />} /> */}
         <Route path="/Aboutus" element={<AboutUS/>} />
-        <Route path="/developer" element={<Developers/>} />
+        {/* <Route path="/developerpage" element={<DevelopersPage/>} /> */}
   
       
     </Routes>
-  )
+  );
 }
