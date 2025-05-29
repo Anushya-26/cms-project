@@ -165,7 +165,7 @@ export default function AboutUs() {
           <a href="/home" className="hover:text-[#B521C0] transition">Home</a>
           <a href="#" className="hover:text-[#B521C0] transition">Adopt</a>
           <a href="/About" className="hover:text-[#B521C0] transition">About</a>
-          <a href="#" className="hover:text-[#B521C0] transition">Developer</a>
+          <a href="/developers" className="hover:text-[#B521C0] transition">Developer</a>
         </div>
         <div className="flex gap-3">
           {/* Sign In and Sign Up buttons */}

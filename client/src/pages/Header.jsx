@@ -31,7 +31,7 @@ return (
           <a href="/about" className="hover:text-[#B521C0] transition">
             About
           </a>
-          <a href="#" className="hover:text-[#B521C0] transition">
+          <a href="/developers" className="hover:text-[#B521C0] transition">
             Developer
           </a>
         </div>

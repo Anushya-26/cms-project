@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Header from "./Header"
 function Developers() {
    const developers=[
     {
@@ -25,13 +25,14 @@ function Developers() {
     }
     ];
     return (
-        <div className="p-8 bg-orange-300 min-h-screen">
+        <div className="p-8 bg-[#f9c5ad] min-h-screen">
+            <Header/>
             <h2 className="text-4xl font-extrabold mb-25 mt-10 text-center text-orange-600 drop-shadow-lg">
-                Developers
+                Developers 🐶
             </h2>
 
             <div
-        className="absolute top-10 left-16 opacity-20 z-20 pointer-events-none text-[60px]"
+        className="absolute top-20 left-16 opacity-20 z-20 pointer-events-none text-[60px]"
       >🐾</div>
       <div
         className="absolute bottom-20 right-20 opacity-15 z-20 pointer-events-none text-[80px]"
