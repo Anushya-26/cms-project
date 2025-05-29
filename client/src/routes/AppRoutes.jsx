@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import AboutUS from "../pages/AboutUs";
-import DevelopersPage from "../pages/DevelopersPage";
+import Developers from "../pages/Developers"; 
 
 
 export default function AppRoutes() {
@@ -12,7 +12,7 @@ export default function AppRoutes() {
         <Route path="/home" element={<Home />} />
         {/* <Route path="/login" element={<Login />} /> */}
         <Route path="/Aboutus" element={<AboutUS/>} />
-        {/* <Route path="/developerpage" element={<DevelopersPage/>} /> */}
+        <Route path="/developer" element={<Developers/>} />
   
       
     </Routes>
