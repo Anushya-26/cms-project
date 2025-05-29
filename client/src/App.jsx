@@ -5,14 +5,11 @@ import './App.css'
 import Home from './pages/Home';
 import { BrowserRouter } from 'react-router';
 import Header from './pages/Header';
+import AppRoutes from './routes/AppRoutes';
 function App() {
 
   return (
-    <>
-    <Header/>
-      <Home/>
-      
-    </>
+    <AppRoutes/>
   )
 }
 
