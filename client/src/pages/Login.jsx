@@ -1,24 +1,27 @@
-import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
+import { useState, useContext } from 'react'
+import AuthContext from '../context/AuthContext' ;
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email || !password) {
-      return;
-    }
-    alert(`Logged in as: ${email}`);
-  };
+export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const { login } = useContext(AuthContext);
+ 
+  function handleSubmit(event) {
+    event.preventDefault();
+    login(email, password);
+  }
 
   return (
+    <>
+
     <div className="min-h-screen w-screen flex items-center justify-center bg-[#F4E7E1] relative overflow-hidden">
       
       <div
         className="absolute top-10 left-16 opacity-20 z-20 pointer-events-none text-[60px]"
       >🐾</div>
+      
       <div
         className="absolute bottom-20 right-20 opacity-15 z-20 pointer-events-none text-[80px]"
       >🐾</div>
@@ -70,7 +73,6 @@ const Login = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
-
-export default Login;

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-
 export default function Signup() {
   const [form, setForm] = useState({
     name: '',
@@ -28,6 +27,7 @@ export default function Signup() {
   };
 
   return (
+    <>
     <div className="flex items-center justify-center min-h-screen bg-[#F4E7E1] relative">
       {/* Dog paw prints background */}
       <div className="absolute inset-0 pointer-events-none opacity-20 select-none">
@@ -136,5 +136,6 @@ export default function Signup() {
         </form>
       </div>
     </div>
+    </>
   );
 }

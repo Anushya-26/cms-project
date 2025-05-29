@@ -1,55 +1,14 @@
-import React from 'react'
-
+import React from "react";
+import { Link } from "react-router-dom";
+import Header from "./Header";
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-[#F4E7E1] via-[#FF9B45]/30 to-[#B521C0]/10 font-sans overflow-x-hidden">
+    <main className="relative min-h-screen bg-gradient-to-br from-[#F4E7E1] via-[#FF9B45]/30 to-[#B521C0]/10 font-sans overflow-hidden">
       {/* Animated background blobs */}
       <div className="absolute -top-32 -left-32 w-[320px] h-[320px] bg-[#D5451B]/20 rounded-full blur-[60px] z-0 animate-float1" />
       <div className="absolute -bottom-40 -right-40 w-[380px] h-[380px] bg-[#B521C0]/20 rounded-full blur-[70px] z-0 animate-float2" />
-
-      {/* Navbar */}
-      <nav className="relative z-20 flex justify-between items-center max-w-7xl mx-auto px-6 py-6">
-        <div className="flex items-center gap-2">
-          {/* Dog paw icon next to the name */}
-          <span className="text-2xl font-extrabold text-[#B521C0] tracking-tight font-serif flex items-center gap-2">
-            PawsFurVive
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-7 h-7 text-[#D5451B]"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <circle cx="5.5" cy="10.5" r="2.5" />
-              <circle cx="18.5" cy="10.5" r="2.5" />
-              <circle cx="12" cy="4.5" r="2.5" />
-              <ellipse cx="12" cy="17" rx="5" ry="7" />
-            </svg>
-          </span>
-        </div>
-        <div className="hidden md:flex gap-8 text-[#D5451B] font-semibold">
-          <a href="#" className="hover:text-[#B521C0] transition">Home</a>
-          <a href="#" className="hover:text-[#B521C0] transition">Adopt</a>
-          <a href="/About" className="hover:text-[#B521C0] transition">About</a>
-          <a href="#" className="hover:text-[#B521C0] transition">Contact</a>
-        </div>
-        <div className="flex gap-3">
-        
-          {/* Sign In and Sign Up buttons */}
-          <a
-            href="/Login"
-            className="bg-white border border-[#B521C0] text-[#B521C0] hover:bg-[#B521C0] hover:text-white font-bold py-2 px-4 rounded-xl shadow transition-colors duration-300 text-base ml-2"
-          >
-            Sign In
-          </a>
-          <a
-            href="/signup"
-            className="bg-[#B521C0] text-white hover:bg-[#D5451B] font-bold py-2 px-4 rounded-xl shadow transition-colors duration-300 text-base ml-2"
-          >
-            Sign Up
-          </a>
-        </div>
-      </nav>
-
+      <Header/>
+    
       {/* Hero Section */}
       <section className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 py-20 px-6">
         {/* Left: Text Content */}
@@ -61,14 +20,19 @@ export default function Home() {
             Adopt <span className="text-[#B521C0]">Happiness</span>
           </h1>
           <p className="text-xl md:text-2xl text-[#B521C0] mb-8 font-medium max-w-2xl">
-            Give a loving home to a dog in need. Every adoption is a new beginning, a new story, and a new best friend.
+            Give a loving home to a dog in need. Every adoption is a new
+            beginning, a new story, and a new best friend.
           </p>
           <div className="flex flex-wrap gap-4 mb-10">
-            <span className="bg-[#F4E7E1] text-[#D5451B] px-4 py-2 rounded-full font-semibold shadow animate-bounce">🐶 100+ Dogs Rescued</span>
-            <span className="bg-[#FF9B45]/20 text-[#B521C0] px-4 py-2 rounded-full font-semibold shadow">❤️ Trusted by Families</span>
+            <span className="bg-[#F4E7E1] text-[#D5451B] px-4 py-2 rounded-full font-semibold shadow animate-bounce">
+              🐶 100+ Dogs Rescued
+            </span>
+            <span className="bg-[#FF9B45]/20 text-[#B521C0] px-4 py-2 rounded-full font-semibold shadow">
+              ❤️ Trusted by Families
+            </span>
           </div>
           <a
-            href="#"
+            href="/login"
             className="bg-[#B521C0] hover:bg-[#D5451B] text-white font-bold py-3 px-10 rounded-xl shadow-lg transition-colors duration-300 text-lg"
           >
             View Dogs for Adoption
@@ -85,14 +49,20 @@ export default function Home() {
                 className="rounded-2xl shadow-xl border-4 border-[#F4E7E1] object-cover w-56 h-56 mb-4 hover:scale-105 transition-transform duration-300"
               />
               <h2 className="text-2xl font-bold text-[#D5451B] mb-1">Buddy</h2>
-              <p className="text-[#B521C0] font-medium mb-2">2 years old • Male</p>
-              <span className="bg-[#FF9B45]/20 text-[#FF9B45] px-3 py-1 rounded-full text-sm mb-3">Labrador Mix</span>
+              <p className="text-[#B521C0] font-medium mb-2">
+                2 years old • Male
+              </p>
+              <span className="bg-[#FF9B45]/20 text-[#FF9B45] px-3 py-1 rounded-full text-sm mb-3">
+                Labrador Mix
+              </span>
               <p className="text-center text-[#B521C0] text-sm mb-4">
                 Friendly, playful, and ready for a forever home!
               </p>
-              <button className="bg-[#FF9B45] hover:bg-[#B521C0] text-white px-6 py-2 rounded-lg font-semibold shadow transition">
+              <Link to="/login">
+              <button  className="bg-[#FF9B45] hover:bg-[#B521C0] text-white px-6 py-2 rounded-lg font-semibold shadow transition">
                 Adopt Me
               </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -102,10 +72,14 @@ export default function Home() {
       <section className="max-w-7xl mx-auto mt-16 px-6 grid md:grid-cols-3 gap-10">
         <div className="bg-gradient-to-br from-[#F4E7E1] to-[#FF9B45]/30 rounded-2xl shadow-xl p-8 border-l-8 border-[#FF9B45] hover:scale-105 transition-transform duration-300 group">
           <h3 className="text-[#D5451B] font-bold text-2xl mb-3 flex items-center gap-2">
-            <span role="img" aria-label="dog">🐕</span> Dog Breeds
+            <span role="img" aria-label="dog">
+              🐕
+            </span>{" "}
+            Dog Breeds
           </h3>
           <p className="text-[#B521C0] text-lg">
-            From playful Labradors to loyal German Shepherds, every breed brings unique joy. Find your perfect match!
+            From playful Labradors to loyal German Shepherds, every breed brings
+            unique joy. Find your perfect match!
           </p>
           <ul className="mt-4 text-[#B521C0] text-base list-disc list-inside space-y-1">
             <li>Labrador Retriever</li>
@@ -116,23 +90,37 @@ export default function Home() {
         </div>
         <div className="bg-gradient-to-br from-[#F4E7E1] to-[#B521C0]/10 rounded-2xl shadow-xl p-8 border-l-8 border-[#B521C0] hover:scale-105 transition-transform duration-300 group">
           <h3 className="text-[#B521C0] font-bold text-2xl mb-3 flex items-center gap-2">
-            <span role="img" aria-label="paw">🐾</span> Why Adopt?
+            <span role="img" aria-label="paw">
+              🐾
+            </span>{" "}
+            Why Adopt?
           </h3>
           <p className="text-[#D5451B] text-lg">
-            Adoption saves lives and gives dogs a second chance. Shelters are full of loving pets waiting for a home.
+            Adoption saves lives and gives dogs a second chance. Shelters are
+            full of loving pets waiting for a home.
           </p>
           <div className="mt-4 flex gap-2">
-            <span className="bg-[#FF9B45]/20 text-[#B521C0] px-3 py-1 rounded-full text-xs font-semibold">Rescue</span>
-            <span className="bg-[#D5451B]/10 text-[#D5451B] px-3 py-1 rounded-full text-xs font-semibold">Love</span>
-            <span className="bg-[#B521C0]/10 text-[#B521C0] px-3 py-1 rounded-full text-xs font-semibold">Family</span>
+            <span className="bg-[#FF9B45]/20 text-[#B521C0] px-3 py-1 rounded-full text-xs font-semibold">
+              Rescue
+            </span>
+            <span className="bg-[#D5451B]/10 text-[#D5451B] px-3 py-1 rounded-full text-xs font-semibold">
+              Love
+            </span>
+            <span className="bg-[#B521C0]/10 text-[#B521C0] px-3 py-1 rounded-full text-xs font-semibold">
+              Family
+            </span>
           </div>
         </div>
         <div className="bg-gradient-to-br from-[#F4E7E1] to-[#D5451B]/10 rounded-2xl shadow-xl p-8 border-l-8 border-[#D5451B] hover:scale-105 transition-transform duration-300 group">
           <h3 className="text-[#FF9B45] font-bold text-2xl mb-3 flex items-center gap-2">
-            <span role="img" aria-label="info">📚</span> About Dog Adoption
+            <span role="img" aria-label="info">
+              📚
+            </span>{" "}
+            About Dog Adoption
           </h3>
           <p className="text-[#B521C0] text-lg">
-            Adopting a dog means gaining a loyal companion. Dogs teach us kindness, patience, and unconditional love.
+            Adopting a dog means gaining a loyal companion. Dogs teach us
+            kindness, patience, and unconditional love.
           </p>
           <div className="mt-4 text-[#D5451B] text-base italic">
             "Adopt, don’t shop. Give a shelter dog a second chance at life."
@@ -143,26 +131,35 @@ export default function Home() {
       {/* Quote Section */}
       <section className="max-w-3xl mx-auto mt-12 px-6">
         <div className="bg-gradient-to-r from-[#B521C0] via-[#FF9B45] to-[#D5451B] text-white px-10 py-8 rounded-3xl font-bold text-2xl shadow-lg text-center border-4 border-[#F4E7E1] animate-fadein">
-          "Saving one dog will not change the world, but surely for that one dog, the world will change forever."
+          "Saving one dog will not change the world, but surely for that one
+          dog, the world will change forever."
         </div>
       </section>
 
       {/* Info Section */}
       <section className="max-w-7xl mx-auto mt-20 px-6 grid md:grid-cols-3 gap-10">
         <div className="bg-white/90 rounded-2xl shadow-xl p-8 border-l-8 border-[#FF9B45] hover:scale-105 transition-transform duration-300">
-          <h3 className="text-[#D5451B] font-bold text-2xl mb-3">Our Mission</h3>
+          <h3 className="text-[#D5451B] font-bold text-2xl mb-3">
+            Our Mission
+          </h3>
           <p className="text-[#B521C0] text-lg">
-            To connect kind humans with wonderful dogs, making the world a better place for both.
+            To connect kind humans with wonderful dogs, making the world a
+            better place for both.
           </p>
         </div>
         <div className="bg-white/90 rounded-2xl shadow-xl p-8 border-l-8 border-[#B521C0] hover:scale-105 transition-transform duration-300">
-          <h3 className="text-[#B521C0] font-bold text-2xl mb-3">How It Works</h3>
+          <h3 className="text-[#B521C0] font-bold text-2xl mb-3">
+            How It Works
+          </h3>
           <p className="text-[#D5451B] text-lg">
-            Browse available dogs, meet your match, and start your adoption journey with PawsFurVive!
+            Browse available dogs, meet your match, and start your adoption
+            journey with PawsFurVive!
           </p>
         </div>
         <div className="bg-white/90 rounded-2xl shadow-xl p-8 border-l-8 border-[#D5451B] hover:scale-105 transition-transform duration-300">
-          <h3 className="text-[#FF9B45] font-bold text-2xl mb-3">Adoption Benefits</h3>
+          <h3 className="text-[#FF9B45] font-bold text-2xl mb-3">
+            Adoption Benefits
+          </h3>
           <ul className="text-[#B521C0] text-lg list-disc list-inside space-y-1">
             <li>Save a life and reduce shelter crowding</li>
             <li>Find a loyal, loving companion</li>
@@ -175,19 +172,37 @@ export default function Home() {
       <section className="max-w-5xl mx-auto mt-24 px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-1 flex flex-col items-center bg-[#F4E7E1]/80 rounded-2xl shadow-lg p-8 mb-6 md:mb-0 hover:scale-105 transition-transform duration-300">
-            <span className="bg-[#FF9B45] text-white w-14 h-14 flex items-center justify-center rounded-full text-3xl font-bold mb-4 shadow-lg animate-bounce">1</span>
-            <h4 className="text-[#B521C0] font-bold text-xl mb-2">Browse Dogs</h4>
-            <p className="text-[#D5451B] text-center">Explore our gallery of adorable, adoptable dogs.</p>
+            <span className="bg-[#FF9B45] text-white w-14 h-14 flex items-center justify-center rounded-full text-3xl font-bold mb-4 shadow-lg animate-bounce">
+              1
+            </span>
+            <h4 className="text-[#B521C0] font-bold text-xl mb-2">
+              Browse Dogs
+            </h4>
+            <p className="text-[#D5451B] text-center">
+              Explore our gallery of adorable, adoptable dogs.
+            </p>
           </div>
           <div className="flex-1 flex flex-col items-center bg-[#F4E7E1]/80 rounded-2xl shadow-lg p-8 mb-6 md:mb-0 hover:scale-105 transition-transform duration-300">
-            <span className="bg-[#B521C0] text-white w-14 h-14 flex items-center justify-center rounded-full text-3xl font-bold mb-4 shadow-lg animate-bounce">2</span>
-            <h4 className="text-[#FF9B45] font-bold text-xl mb-2">Meet & Greet</h4>
-            <p className="text-[#D5451B] text-center">Schedule a visit and get to know your future friend.</p>
+            <span className="bg-[#B521C0] text-white w-14 h-14 flex items-center justify-center rounded-full text-3xl font-bold mb-4 shadow-lg animate-bounce">
+              2
+            </span>
+            <h4 className="text-[#FF9B45] font-bold text-xl mb-2">
+              Meet & Greet
+            </h4>
+            <p className="text-[#D5451B] text-center">
+              Schedule a visit and get to know your future friend.
+            </p>
           </div>
           <div className="flex-1 flex flex-col items-center bg-[#F4E7E1]/80 rounded-2xl shadow-lg p-8 hover:scale-105 transition-transform duration-300">
-            <span className="bg-[#D5451B] text-white w-14 h-14 flex items-center justify-center rounded-full text-3xl font-bold mb-4 shadow-lg animate-bounce">3</span>
-            <h4 className="text-[#B521C0] font-bold text-xl mb-2">Adopt & Love</h4>
-            <p className="text-[#D5451B] text-center">Complete the process and welcome your new family member!</p>
+            <span className="bg-[#D5451B] text-white w-14 h-14 flex items-center justify-center rounded-full text-3xl font-bold mb-4 shadow-lg animate-bounce">
+              3
+            </span>
+            <h4 className="text-[#B521C0] font-bold text-xl mb-2">
+              Adopt & Love
+            </h4>
+            <p className="text-[#D5451B] text-center">
+              Complete the process and welcome your new family member!
+            </p>
           </div>
         </div>
       </section>
@@ -201,11 +216,22 @@ export default function Home() {
             className="rounded-2xl shadow-lg w-40 h-40 object-cover border-4 border-[#F4E7E1] mb-6 md:mb-0"
           />
           <div>
-            <h3 className="text-2xl font-bold text-[#B521C0] mb-3">Did You Know?</h3>
+            <h3 className="text-2xl font-bold text-[#B521C0] mb-3">
+              Did You Know?
+            </h3>
             <ul className="list-disc list-inside text-[#D5451B] text-lg space-y-2">
-              <li>Dogs have an extraordinary sense of smell—up to 100,000 times better than humans!</li>
-              <li>Adopted dogs often show immense gratitude and loyalty to their new families.</li>
-              <li>Every year, millions of dogs are looking for loving homes. You can make a difference!</li>
+              <li>
+                Dogs have an extraordinary sense of smell—up to 100,000 times
+                better than humans!
+              </li>
+              <li>
+                Adopted dogs often show immense gratitude and loyalty to their
+                new families.
+              </li>
+              <li>
+                Every year, millions of dogs are looking for loving homes. You
+                can make a difference!
+              </li>
             </ul>
           </div>
         </div>
