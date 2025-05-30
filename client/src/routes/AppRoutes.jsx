@@ -5,7 +5,6 @@ import Login from "../pages/Login";
 import Developers from "../pages/Developers";
 import Signup from "../pages/Signup";
 import Notfound from "../pages/Notfound";
-import UserStats from "../CMS/userStats";
 import DashboardLayouts from "../layouts/DashboardLayouts";
 import Guidelines from "../dashboard/Guidelines";
 import UserForm from "../dashboard/UserForm";
@@ -20,7 +19,6 @@ export default function AppRoutes() {
         <Route path="/about" element={<AboutUs/>} />
         <Route path="/signup" element={<Signup/>} />
         <Route path="/developers" element={<Developers/>} />
-        <Route path="/stats" element={<UserStats/>} />
         <Route path="*" element={<Notfound/>} />
         <Route path="/dashboard" element={<DashboardLayouts/>} />
         <Route path="/dashboard/Guidelines" element={<Guidelines/>} />
