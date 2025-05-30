@@ -1,5 +1,4 @@
-import React from 'react'
-import Header from './Header';
+import {Link} from 'react-router-dom';
 export default function AboutUs() {
   
   // --- PawsFurVive Section ---
@@ -162,25 +161,25 @@ export default function AboutUs() {
           <span className="text-2xl md:text-3xl font-bold text-orange-500">🐾 PawsFurVive</span>
         </div>
         <div className="hidden md:flex gap-8 text-[#D5451B] font-semibold">
-          <a href="/home" className="hover:text-[#B521C0] transition">Home</a>
-          <a href="#" className="hover:text-[#B521C0] transition">Adopt</a>
-          <a href="/About" className="hover:text-[#B521C0] transition">About</a>
-          <a href="/developers" className="hover:text-[#B521C0] transition">Developer</a>
+          <Link to="/home" className="hover:text-[#B521C0] transition">Home</Link>
+          <Link to="#" className="hover:text-[#B521C0] transition">Adopt</Link>
+          <Link to="/About" className="hover:text-[#B521C0] transition">About</Link>
+          <Link to="/developers" className="hover:text-[#B521C0] transition">Developer</Link>
         </div>
         <div className="flex gap-3">
           {/* Sign In and Sign Up buttons */}
-          <a
-            href="/Login"
+          <Link
+            to="/Login"
             className="bg-white border border-[#B521C0] text-[#B521C0] hover:bg-[#B521C0] hover:text-white font-bold py-2 px-4 rounded-xl shadow transition-colors duration-300 text-base ml-2"
           >
             Sign In
-          </a>
-          <a
-            href="/signup"
+          </Link>
+          <Link
+            to="/signup"
             className="bg-[#B521C0] text-white hover:bg-[#D5451B] font-bold py-2 px-4 rounded-xl shadow transition-colors duration-300 text-base ml-2"
           >
             Sign Up
-          </a>
+          </Link>
 
         </div>
       </header>

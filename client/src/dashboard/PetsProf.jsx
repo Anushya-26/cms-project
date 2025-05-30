@@ -1,4 +1,4 @@
-import React from "react";
+import {Link} from "react-router-dom";
 
 export default function PetsProf() {
   const dogs = [
@@ -244,12 +244,12 @@ export default function PetsProf() {
                 boxShadow: "0 2px 8px rgba(251,191,36,0.15)",
               }}
             >
-              <a
-                href="/dashboard/form"
+              <Link
+                to="/dashboard/form"
                 style={{ color: "#fff", textDecoration: "none" }}
               >
                 Adopt Me
-              </a>
+              </Link>
             </button>
           </div>
         ))}

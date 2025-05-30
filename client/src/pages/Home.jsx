@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 export default function Home() {
@@ -31,12 +30,12 @@ export default function Home() {
               ❤️ Trusted by Families
             </span>
           </div>
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="bg-[#B521C0] hover:bg-[#D5451B] text-white font-bold py-3 px-10 rounded-xl shadow-lg transition-colors duration-300 text-lg"
           >
             View Dogs for Adoption
-          </a>
+          </Link>
         </div>
         {/* Right: Dog Image Card Carousel */}
         <div className="flex-1 flex justify-center items-center">

@@ -1,4 +1,4 @@
-import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function Header() {
 return (
@@ -22,33 +22,33 @@ return (
           </span>
         </div>
         <div className="hidden md:flex gap-8 text-[#D5451B] font-semibold px-5">
-          <a href="/home" className="hover:text-[#B521C0] transition">
+          <Link to="/home" className="hover:text-[#B521C0] transition">
             Home
-          </a>
-          <a href="/login" className="hover:text-[#B521C0] transition">
+          </Link>
+          <Link to="/login" className="hover:text-[#B521C0] transition">
             Adopt
-          </a>
-          <a href="/about" className="hover:text-[#B521C0] transition">
+          </Link>
+          <Link to="/about" className="hover:text-[#B521C0] transition">
             About
-          </a>
-          <a href="/developers" className="hover:text-[#B521C0] transition">
+          </Link>
+          <Link to="/developers" className="hover:text-[#B521C0] transition">
             Developer
-          </a>
+          </Link>
         </div>
         <div className="flex gap-3">
           {/* Sign In and Sign Up buttons */}
-          <a
-            href="/Login"
+          <Link
+            to="/Login"
             className="bg-white border border-[#B521C0] text-[#B521C0] hover:bg-[#B521C0] hover:text-white font-bold py-2 px-4 rounded-xl shadow transition-colors duration-300 text-base ml-2"
           >
             Sign In
-          </a>
-          <a
-            href="/Signup"
+          </Link>
+          <Link
+            to="/Signup"
             className="bg-[#B521C0] text-white hover:bg-[#D5451B] font-bold py-2 px-4 rounded-xl shadow transition-colors duration-300 text-base ml-2"
           >
             Sign Up
-          </a>
+          </Link>
         </div>
       </nav>
 
