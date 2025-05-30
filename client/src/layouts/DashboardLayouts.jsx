@@ -1,12 +1,12 @@
 import { Link, Outlet, useLocation } from 'react-router';
 
 const PATHS = [
-    { path: '/cms/form', text: 'Adoption Form' },
-    { path: '/cms/guideline', text: 'Guidelines' },
-    { path: '/cms/petprofile', text: 'Pet Profile' }
+    { path: '/dashboard/form', text: 'Adoption Form' },
+    { path: '/dashboard/Guidelines', text: 'Guidelines' },
+    { path: '/dashboard/profile', text: 'Pet Profile' }
 ];
 
-export default function Dashboard() {
+export default function DashboardLayouts() {
     const location = useLocation();
 
     return (

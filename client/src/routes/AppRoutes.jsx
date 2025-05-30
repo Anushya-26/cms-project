@@ -5,7 +5,12 @@ import Login from "../pages/Login";
 import Developers from "../pages/Developers";
 import Signup from "../pages/Signup";
 import Notfound from "../pages/Notfound";
-import UserStats from "../CMS/UserStats" ;
+import UserStats from "../CMS/userStats";
+import DashboardLayouts from "../layouts/DashboardLayouts";
+import Guidelines from "../dashboard/Guidelines";
+import UserForm from "../dashboard/UserForm";
+import PetsProf from "../dashboard/PetsProf";
+
 export default function AppRoutes() {
   return (
     <Routes>
@@ -17,6 +22,11 @@ export default function AppRoutes() {
         <Route path="/developers" element={<Developers/>} />
         <Route path="/stats" element={<UserStats/>} />
         <Route path="*" element={<Notfound/>} />
+        <Route path="/dashboard" element={<DashboardLayouts/>} />
+        <Route path="/dashboard/Guidelines" element={<Guidelines/>} />
+        <Route path="/dashboard/form" element={<UserForm/>} />
+        <Route path="/dashboard/profile" element={<PetsProf/>} />
+
 
     </Routes>
   )
