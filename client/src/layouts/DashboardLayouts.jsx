@@ -33,6 +33,14 @@ export default function DashboardLayouts() {
                         </Link>
                     ))}
                 </nav>
+               <button
+                    onClick={() => {
+                        alert("Logged out!");
+                    }}
+                    className="absolute bottom-8 left-15 text-white bg-[#FF9B45] px-8 py-3 rounded-lg shadow hover:bg-white hover:text-[#D5451B] font-semibold transition duration-300"
+                >
+                   <Link to="/">Logout</Link>
+                </button>
             </aside>
             <main className="bg-[#F4E7E1] flex-1 min-h-screen overflow-auto p-10">
                 <div className="text-center mb-15 mt-5">
