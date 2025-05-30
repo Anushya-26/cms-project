@@ -1,9 +1,9 @@
 import { Link, Outlet, useLocation } from 'react-router';
 
 const PATHS = [
-    { path: '/dashboard/form', text: 'Adoption Form' },
+    { path: '/dashboard/profile', text: 'Pet Profile' },
     { path: '/dashboard/Guidelines', text: 'Guidelines' },
-    { path: '/dashboard/profile', text: 'Pet Profile' }
+    { path: '/dashboard/form', text: 'Adoption Form' }
 ];
 
 export default function DashboardLayouts() {
