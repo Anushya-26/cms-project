@@ -25,7 +25,7 @@ function Developers() {
     }
     ];
     return (
-        <div className="p-8 bg-[#f9c5ad] min-h-screen">
+        <div className="p-8 bg-[#f4e7e1] min-h-screen">
             <Header/>
             <h2 className="text-4xl font-extrabold mb-25 mt-10 text-center text-orange-600 drop-shadow-lg">
                 Developers 🐶
@@ -41,7 +41,7 @@ function Developers() {
             <div className="flex flex-wrap gap-8 justify-center">
                 {developers.map((dev, index) => (
                     <div
-                        className="bg-orange-100 bg-opacity-95 shadow-xl rounded-2xl p-8 w-70 h-70 flex flex-col items-center border-4 border-orange-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                        className="bg-[#f5d7ca] bg-opacity-95 shadow-xl rounded-2xl p-8 w-70 h-70 flex flex-col items-center border-4 border-orange-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                         key={index}
                         style={{
                             boxShadow: "0 8px 32px 0 rgba(255, 200, 100, 0.18)"
