@@ -21,13 +21,20 @@ export default function UserStats() {
 	}, []);
 
 	return (
-		<div className="max-w-2xl mx-auto mt-8 p-6 bg-white rounded-lg shadow">
-			<h2 className="text-2xl font-bold mb-6 text-gray-800">User Stats</h2>
+		<div className="p-8 bg-[#f4e7e1] min-h-screen">
+		 <div
+        className="absolute top-20 left-16 opacity-20 z-20 pointer-events-none text-[60px]"
+      >🐾</div>
+      <div
+        className="absolute bottom-20 right-20 opacity-15 z-20 pointer-events-none text-[80px]"
+      >🐾</div>
+		<div className="max-w-2xl mx-auto mt-28 p-6 bg-white rounded-lg shadow">
+			<h2 className="text-2xl font-bold mb-6 text-orange-400">User Stats</h2>
 			<table className="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
 				<thead>
 					<tr className="bg-gray-100">
-						<th className="py-3 px-4 text-left font-semibold text-gray-700">Email</th>
-						<th className="py-3 px-4 text-left font-semibold text-gray-700">
+						<th className="py-3 px-4 text-left font-semibold text-[#D5451B]">Email</th>
+						<th className="py-3 px-4 text-left font-semibold text-[#D5451B]">
 							Logged in count
 						</th>
 					</tr>
@@ -35,7 +42,7 @@ export default function UserStats() {
 				<tbody>
 					{userStats.length === 0 ? (
 						<tr>
-							<td colSpan={2} className="py-4 px-4 text-center text-gray-500">
+							<td colSpan={2} className="py-4 px-4 text-center text-[#FF9B45] ">
 								No user stats available.
 							</td>
 						</tr>
@@ -52,6 +59,7 @@ export default function UserStats() {
 					)}
 				</tbody>
 			</table>
+		</div>
 		</div>
 	);
 }
