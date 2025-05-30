@@ -1,29 +1,17 @@
-import React from 'react'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import AuthContext from '../context/AuthContext';
+
 export default function Signup() {
-  const [form, setForm] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  });
-
-  const [error, setError] = useState('');
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-    setError('');
-  };
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
+  const { register } = useContext(AuthContext);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (form.password !== form.confirmPassword) {
-      setError('Passwords do not match');
-      return;
-    }
-    // Handle signup logic here (e.g., API call)
-    alert('Signup successful!');
+    register(email, password);
+    
   };
 
   return (
@@ -52,8 +40,6 @@ export default function Signup() {
               type="text"
               name="name"
               id="name"
-              value={form.name}
-              onChange={handleChange}
               required
               autoComplete="name"
               placeholder="Enter your name"
@@ -68,8 +54,6 @@ export default function Signup() {
               type="tel"
               name="phone"
               id="phone"
-              value={form.phone}
-              onChange={handleChange}
               required
               autoComplete="tel"
               placeholder="Enter your phone number"
@@ -84,8 +68,8 @@ export default function Signup() {
               type="email"
               name="email"
               id="email"
-              value={form.email}
-              onChange={handleChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
               autoComplete="email"
               placeholder="Enter your email"
@@ -100,8 +84,8 @@ export default function Signup() {
               type="password"
               name="password"
               id="password"
-              value={form.password}
-              onChange={handleChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
               autoComplete="new-password"
               placeholder="Enter your password"
@@ -116,16 +100,11 @@ export default function Signup() {
               type="password"
               name="confirmPassword"
               id="confirmPassword"
-              value={form.confirmPassword}
-              onChange={handleChange}
               required
               autoComplete="new-password"
               placeholder="Confirm your password"
             />
           </div>
-          {error && (
-            <div className="mb-4 text-red-600 text-sm text-center">{error}</div>
-          )}
           <button
             type="submit"
             className="w-full bg-[#B521C0] text-white py-2 rounded-lg hover:bg-[#FF9B45] hover:text-[#B521C0] transition-colors font-semibold shadow-md flex items-center justify-center gap-2"
