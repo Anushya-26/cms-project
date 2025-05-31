@@ -105,14 +105,13 @@ export default function Signup() {
               placeholder="Confirm your password"
             />
           </div>
-         <Link to="/dashboard"> <button
+          <button
             type="submit"
             className="w-full bg-[#B521C0] text-white py-2 rounded-lg hover:bg-[#FF9B45] hover:text-[#B521C0] transition-colors font-semibold shadow-md flex items-center justify-center gap-2"
           >
             <span>Sign Up</span>
             <span className="text-lg">🐾</span>
           </button>
-          </Link>
         </form>
       </div>
     </div>

@@ -39,7 +39,7 @@ function AuthProvider({ children }) {
 		try {
 			userService.addUser(email, password);
 			setIsAuth(true);
-			navigate('/dashboard/intro');
+			navigate('/dashboard');
 			Swal.fire({
 				title: "Success",
 				text: "Registration is successful",
