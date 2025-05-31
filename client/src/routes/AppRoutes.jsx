@@ -22,14 +22,14 @@ export default function AppRoutes() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/developers" element={<Developers />} />
         <Route path="*" element={<Notfound />} />
-      <Route
+      {/* <Route
 				path="/dashboard"
 				element={
 					<PrivateRoute>
 						<DashboardLayouts />
 					</PrivateRoute>
 				}
-			></Route>
+			></Route> */}
     
         <Route path="/dashboard" element={<DashboardLayouts />} />
         <Route path="/dashboard/Guidelines" element={<Guidelines />} />
